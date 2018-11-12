@@ -17,6 +17,10 @@ public class ProductController {
     @RequestMapping("/show/{id}")
     @ResponseBody
     public EasybuyProduct show(@PathVariable("id") Integer id){
+
+        String zgl="zgl";
+        String ss="asssszzaazaaaaa";
+        String s="zglaaazzzz";
         return productService.getById(id);
     }
 }
