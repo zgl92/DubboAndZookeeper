@@ -18,7 +18,7 @@ public class ProductController {
     @ResponseBody
     public EasybuyProduct show(@PathVariable("id") Integer id){
 
-        String aaa="ssss";
+        String aaa="ssssaaaa";
         String zgl="zgl";
         String ss="asssszzaazaaaaa";
         String s="zglaaazzzz";
