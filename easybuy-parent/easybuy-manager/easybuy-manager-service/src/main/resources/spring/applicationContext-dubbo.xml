@@ -24,18 +24,19 @@
     <dubbo:application  name="easybuy-manager"/>
 
     <!--注册中心地址 不一定用zookeeper  还可以用redis作为注册中心-->
-    <dubbo:registry protocol="zookeeper" address="172.16.64.137:2181"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.222.128:2181"/>
 
     <!--使用Dubbo的协议暴露协议-->
-    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- 声明要暴露的接口
        interface:暴露了需要提供的接口
        ref：就是spring容器中管理bean的id
          在applicationContext-service.xml 中进行了@service注解 只要用到该注解的类会自动加载到spring容器中，id就是该类的首字母的小写
     -->
-    <dubbo:service interface="org.java.service.ProductService" ref="productServiceImpl" timeout="300000"/>
-
+    <!--发布服务-->
+    <dubbo:service interface="org.java.service.ProductService" ref="productServiceImpl"/>
+    <dubbo:service interface="org.java.service.ProductCategoryService" ref="productCategoryServiceImpl"/>
 
 </beans>
 

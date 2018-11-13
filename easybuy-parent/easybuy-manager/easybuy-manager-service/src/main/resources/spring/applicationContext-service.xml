@@ -16,6 +16,6 @@
 
 
     <!-- 为了将@service标记的类加载到spring中，作为Bean进行管理 -->
-    <context:component-scan base-package="org.java.service"/>
+    <context:component-scan base-package="org.java.service"></context:component-scan>
 
 </beans>

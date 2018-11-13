@@ -28,19 +28,23 @@
 
       <!--视图解析器-->
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-            <property name="prefix" value="/WEB-INF/jsp"></property>
+            <property name="prefix" value="/WEB-INF/jsp/"></property>
             <property name="suffix" value=".jsp"></property>
         </bean>
+
+      <!--不拦截静态资源-->
+      <mvc:default-servlet-handler/>
+
 
     <!--引用Dubbo提供的服务-->
     <!--给应用起名字-->
     <dubbo:application  name="easybuy-manager-web"/>
 
     <!-- 指向链接的注册中心的地址-->
-    <dubbo:registry protocol="zookeeper" address="172.16.64.137:2181"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.222.128:2181"/>
 
     <!--引用dubbo提供的服务-->
-    <dubbo:service interface="org.java.service.ProductService" id="productService" timeout="300000"/>
-
+    <dubbo:reference  interface="org.java.service.ProductService" id="productService"/>
+    <dubbo:reference  interface="org.java.service.ProductCategoryService" id="productCategoryService"/>
 
 </beans>
