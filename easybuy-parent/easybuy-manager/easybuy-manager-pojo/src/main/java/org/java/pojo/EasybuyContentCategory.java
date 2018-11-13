@@ -1,8 +1,9 @@
 package org.java.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class EasybuyContentCategory {
+public class EasybuyContentCategory implements Serializable {
     private Integer id;
 
     private Integer parentid;

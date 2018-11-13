@@ -1,6 +1,8 @@
 package org.java.pojo;
 
-public class EasybuyProduct {
+import java.io.Serializable;
+
+public class EasybuyProduct implements Serializable {
     private Integer id;
 
     private String name;

@@ -1,8 +1,9 @@
 package org.java.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class EasybuyOrder {
+public class EasybuyOrder implements Serializable {
     private String id;
 
     private Integer userid;

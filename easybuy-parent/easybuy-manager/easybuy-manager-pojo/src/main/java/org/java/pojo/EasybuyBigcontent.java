@@ -1,6 +1,8 @@
 package org.java.pojo;
 
-public class EasybuyBigcontent {
+import java.io.Serializable;
+
+public class EasybuyBigcontent implements Serializable {
     private Integer id;
 
     private String title;

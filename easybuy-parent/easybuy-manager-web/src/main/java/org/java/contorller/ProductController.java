@@ -14,6 +14,7 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+
     @RequestMapping("/show/{id}")
     @ResponseBody
     public EasybuyProduct show(@PathVariable("id") Integer id){

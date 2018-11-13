@@ -1,11 +1,11 @@
 package org.java.service.impl;
 
+import org.java.mapper.EasybuyProductMapper;
 import org.java.pojo.EasybuyProduct;
 import org.java.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.org.java.mapper.EasybuyProductMapper;
 
 @Service
 public class ProductServiceImpl implements ProductService {
